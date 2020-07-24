@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 
 if [ -z "$INPUT_APPLICATION" ]; then
     echo "application name must be supplied to use this action."
