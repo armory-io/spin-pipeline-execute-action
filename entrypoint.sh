@@ -31,5 +31,5 @@ echo "$INPUT_CONFIGDATA" > ${HOME}/.spinconfig
 spin pipeline execute \
     --application "$INPUT_APPLICATION" \
     --name "$INPUT_PIPELINE" \
-    --config ${HOME}/.spinconfig
+    --config ${HOME}/.spinconfig \
     $additional_args
