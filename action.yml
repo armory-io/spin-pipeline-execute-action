@@ -1,0 +1,19 @@
+# action.yml
+name: 'Spinnaker Pipeline Trigger Action'
+description: 'Trigger a Spinnaker pipeline using the Spin CLI'
+inputs:
+  application:
+    description: Spinnaker Application name
+    required: true
+  pipeline:
+    description: Spinnaker Pipeline name
+    required: true
+  configData:
+    description: Spin CLI configuration
+    required: true
+  parameterFile:
+    description: Path to file to use as input parameters
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
