@@ -14,6 +14,9 @@ inputs:
   parameterFile:
     description: Path to file to use as input parameters
     required: false
+  parameterJson:
+    description: JSON data to send as input parameters
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'

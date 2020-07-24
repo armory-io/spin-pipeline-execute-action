@@ -21,6 +21,11 @@ if [ ! -z "$INPUT_PARAMETERFILE" ]; then
     additional_args="$additional_args --parameter-file $INPUT_PARAMETERFILE"
 fi
 
+if [ ! -z "$INPUT_PARAMETERJSON" ]; then
+    echo "$INPUT_PARAMETERJSON" > spin-cli-parameters.json
+    additional_args="$additional_args --parameter-file spin-cli-parameters.json"
+fi 
+
 # write configuration to default location
 echo "$INPUT_CONFIGDATA" > ${HOME}/.spinconfig
 spin pipeline execute \
