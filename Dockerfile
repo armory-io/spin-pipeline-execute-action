@@ -1,4 +1,4 @@
-FROM armory/spin-cli:1.14.0
+FROM armory/spin-cli:latest
 
 RUN apk add --no-cache bash
 
