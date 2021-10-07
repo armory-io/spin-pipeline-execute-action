@@ -28,8 +28,16 @@ fi
 
 # write configuration to default location
 echo "$INPUT_CONFIGDATA" > ${HOME}/.spinconfig
-spin pipeline execute \
+
+# retry
+n=0
+until [ "$n" -ge 5 ]
+do
+   spin pipeline execute \
     --application "$INPUT_APPLICATION" \
     --name "$INPUT_PIPELINE" \
     --config ${HOME}/.spinconfig \
-    $additional_args
+    $additional_args && break
+   n=$((n+1))
+   sleep 15
+done
